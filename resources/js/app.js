@@ -15,13 +15,13 @@ orange.addEventListener('click', () => {
         blueDetails[0].classList.remove('blue-details-display')
         setTimeout(() => {
             orangeDetails[0].classList.add('orange-details-display')
-        }, 300)
+        }, 500)
         
     } else {
         details[0].classList.add('img-details-hide')
         setTimeout(() => {
             orangeDetails[0].classList.add('orange-details-display')
-        }, 300)
+        }, 500)
     }
 })
 
@@ -29,7 +29,7 @@ exitOrange.addEventListener('click', () => {
     orangeDetails[0].classList.remove('orange-details-display')
     setTimeout(() => {
         details[0].classList.remove('img-details-hide')
-    }, 300)
+    }, 500)
 })
 
 blue.addEventListener('click', () => {
@@ -37,12 +37,12 @@ blue.addEventListener('click', () => {
         orangeDetails[0].classList.remove('orange-details-display')
         setTimeout(() => {
             blueDetails[0].classList.add('blue-details-display')
-        }, 300)
+        }, 500)
     }else {
         details[0].classList.add('img-details-hide')
         setTimeout(() => {
             blueDetails[0].classList.add('blue-details-display')
-        }, 300)
+        }, 500)
     }
 })
 
@@ -50,7 +50,7 @@ exitBlue.addEventListener('click', () => {
     blueDetails[0].classList.remove('blue-details-display')
     setTimeout(() => {
         details[0].classList.remove('img-details-hide')
-    }, 300)
+    }, 500)
 })
 
 nav.addEventListener('click', () => {
@@ -60,6 +60,7 @@ nav.addEventListener('click', () => {
         blueDetails[0].classList.remove('blue-details-display')
         setTimeout(() => {
             details[0].classList.remove('img-details-hide')
-        }, 300)
+        }, 500)
     }
 })
+
