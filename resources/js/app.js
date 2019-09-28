@@ -8,6 +8,7 @@ const blueDetails = document.getElementsByClassName('blue-details')
 const details = document.getElementsByClassName('img-details')
 const exitOrange = document.getElementById('exitOrange')
 const exitBlue = document.getElementById('exitBlue')
+const nav = document.getElementById('nav')
 
 orange.addEventListener('click', () => {
     if (blueDetails[0].classList.contains('blue-details-display')) {
@@ -50,4 +51,15 @@ exitBlue.addEventListener('click', () => {
     setTimeout(() => {
         details[0].classList.remove('img-details-hide')
     }, 300)
+})
+
+nav.addEventListener('click', () => {
+    if (orangeDetails[0].classList.contains('orange-details-display') ||
+        blueDetails[0].classList.contains('blue-details-display')) {
+        orangeDetails[0].classList.remove('orange-details-display')
+        blueDetails[0].classList.remove('blue-details-display')
+        setTimeout(() => {
+            details[0].classList.remove('img-details-hide')
+        }, 300)
+    }
 })
