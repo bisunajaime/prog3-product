@@ -48,7 +48,7 @@
         }
 
         .square {
-            border: 3px solid rgb(223, 223, 223);
+            border: 1px solid rgb(223, 223, 223);
             height: 100%;
             grid-gap: 20px;
             transition: 0.25s;
@@ -219,9 +219,9 @@
             <img src="resources/img/Adidas_Logo.svg" alt="" id="img">
             <div class="form">
                 <h1 id="form-label">Enter Information</h1>
-                <form action="">
+                <form action="index.html">
                     <label for="">First Name</label><br />
-                    <input type="text" name="" id=""><br />
+                    <input type="text" name="" id="" class="input-number" placeholder="Enter time"><br />
                     <span class="errMsg">s</span><br />
                     <label for="">Last Name</label><br />
                     <input type="text" name="" id=""><br />
@@ -242,65 +242,8 @@
         <div class="bg">
         </div>
     </div>
-    <script>
-        const square = document.getElementsByClassName('square')
-        const bg = document.getElementsByClassName('bg')
-        const newSquare = document.createElement("div")
-        const loginBg = document.getElementsByClassName('login')
-        const label = document.getElementsByTagName('label')
-        const img = document.getElementById('img')
-        const form = document.getElementsByClassName('form')
-        const formLabel = document.getElementById('form-label')
-
-        img.addEventListener('click', () => {
-            img.classList.add('hide-img')
-            form[0].classList.add('form-unhide')
-        })
-
-        for (let i = 0; i < 25; i++) {
-            newSquare.setAttribute("class", "square")
-            bg[0].appendChild(newSquare.cloneNode())
-        }
-        for (let i = 0; i < square.length; i++) {
-            let red = Math.round(Math.random() * 150)
-            let green = Math.round(Math.random() * 150)
-            let blue = Math.round(Math.random() * 150)
-
-            if (i % 2 == 0) {
-                square[i].style.background = "linear-gradient(60deg, rgb(" + red + ", " + green + ", " + blue +
-                    "),rgb(" + green + ", " + red + ", " + blue + "))"
-            } else {
-                square[i].style.background = "linear-gradient(60deg, rgb(" + red + ", " + green + ", " + blue +
-                    "),rgb(" + green + ", " + red + ", " + blue + "))"
-            }
-        }
-        for (let i = 0; i < square.length; i++) {
-            square[i].addEventListener('click', (e) => {
-                let red = Math.round(Math.random() * 150)
-                let green = Math.round(Math.random() * 150)
-                let blue = Math.round(Math.random() * 150)
-                if (i % 2 == 0) {
-                    square[i].style.backgroundColor = "linear-gradient(60deg, rgb(" + red + ", " + green +
-                        ", " + blue +
-                        "),rgb(" + green + ", " + red + ", " + blue + "))"
-                    loginBg[0].style.background = "linear-gradient(60deg, rgb(" + red + ", " + green + ", " +
-                        blue +
-                        "),rgb(" + green + ", " + red + ", " + blue + "))"
-                    loginBg[0].classList.toggle('bg-transition')
-                    loginBg[0].style.transition = "0.5s"
-                } else {
-                    square[i].style.backgroundColor = `rgb(${blue},${red},${green})`
-                    loginBg[0].style.background = `rgb(${blue},${red},${green})`
-                    loginBg[0].classList.toggle('bg-transition')
-                    loginBg[0].style.transition = "0.5s"
-                }
-                for (let i = 0; i < label.length; i++) {
-                    label[i].style.color = "white"
-                    formLabel.style.color = "white"
-                }
-            })
-        }
-    </script>
+    <script src="resources/js/cleave.min.js"></script>
+    <script src="resources/js/login.js"></script>
 </body>
 
 </html>
